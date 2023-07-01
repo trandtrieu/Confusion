@@ -1,3 +1,4 @@
+import React from "react";
 import {
   Card,
   CardImg,
@@ -55,7 +56,7 @@ function RenderComments({ comments }) {
 }
 
 const DishDetail = (props) => {
-  if (props.dish != null)
+  if (props.dish != null) {
     return (
       <div className="container">
         <div className="row">
@@ -80,6 +81,9 @@ const DishDetail = (props) => {
         </div>
       </div>
     );
+  } else {
+    return <div></div>;
+  }
 };
 
 export default DishDetail;
